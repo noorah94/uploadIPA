@@ -29,7 +29,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>sa.gov.qassim.iphone.Qassim-Municipality.Khadamaty</string>
+				<string>sa.gov.qassim.khadamaty</string>
 				<key>bundle-version</key>
 				<string>1.1</string>
 				<key>kind</key>
