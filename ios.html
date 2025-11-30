@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيقات الأجهزة الذكية - تعليمات التثبيت</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- إضافة خط Kufam -->
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <!-- إضافة خط IBM Plex Sans Arabic -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #066d66;
+            --secondary: #c79b2a;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans Arabic', Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f8f9fa;
+            padding-bottom: 30px;
+        }
+
+        h1, h5 {
+            font-family: 'IBM Plex Sans Arabic', Arial, sans-serif;
+            color: var(--primary);
+        }
+
+        .header {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .logo-container img {
+            max-width: 10%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .shape-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .shape-image {
+                height: 80px;
+            }
+            .logo-container img {
+                max-width: 40%;
+                height: auto;
+            }
+        }
+
+        .install-instructions {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .install-instructions h1 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        .instruction-step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .step-img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            margin: 0 auto;
+        }
+
+        .step-text {
+            flex: 1;
+            text-align: right;
+        }
+
+        .step-text h5 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .step-text p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .reference-link {
+            display: block;
+            margin-top: 20px;
+            color: var(--secondary);
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #066d66;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .instruction-step {
+                flex-direction: column;
+            }
+            .step-img {
+                max-width: 100%;
+                width: 80%;
+            }
+            .install-instructions h1,
+            .step-text h5,
+            .step-text p,
+            .reference-link {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <img src="images/header.png" alt="Header" class="header-image">
+    </header>
+
+    <main>
+        <section class="install-instructions">
+            <h1>تعليمات تثبيت تطبيق خدماتي على iPhone</h1>
+            <p style="text-align: center;">لتثبيت التطبيق على جهازك الـ iPhone، يرجى اتباع الخطوات التالية:</p>
+
+            <!-- الخطوة الأولى -->
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>1. تثبيت التطبيق</h5>
+                    <p>اذهب إلى صفحة تطبيقات الأجهزة الذكية واضغط على زر التثبيت.</p>
+                </div>
+                <img src="images/step1.jpg" alt="الرسالة عند فتح التطبيق" class="step-img">
+            </div>
+
+            <!-- الخطوات التالية -->
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>2. فتح التطبيق</h5>
+                    <p>عند فتح التطبيق سوف تظهر لك الرسالة التالية:</p>
+                </div>
+                <img src="images/step2.jpg" alt="الرسالة عند فتح التطبيق" class="step-img">
+            </div>
+
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>3. توثيق التطبيق</h5>
+                    <p>انتقل إلى "الإعدادات" ثم اختر "عام".</p>
+                </div>
+                <img src="images/step3.jpg" alt="الذهاب إلى VPN" class="step-img">
+            </div>
+
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>4. الذهاب إلى VPN وإدارة الأجهزة</h5>
+                    <p>في الإعدادات، اذهب إلى "VPN" ومن ثم "إدارة الأجهزة".</p>
+                </div>
+                <img src="images/step4.jpg" alt="اختيار Qassim Municipality" class="step-img">
+            </div>
+
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>5. اختيار "Qassim Municipality"</h5>
+                    <p>اختر "Qassim Municipality" من قائمة الأجهزة الموثوقة.</p>
+                </div>
+                <img src="images/step5.jpg" alt="الوثوق بـ Qassim Municipality" class="step-img">
+            </div>
+
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>6. الوثوق بـ "Qassim Municipality"</h5>
+                    <p>اختر الوثوق بـ "Qassim Municipality" لتفعيل التطبيق.</p>
+                </div>
+                <img src="images/step6.jpg" alt="إعادة التشغيل" class="step-img">
+            </div>
+
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>7. إعادة تشغيل الجهاز</h5>
+                    <p>بعد الوثوق، اختر السماح ثم قم بإعادة تشغيل جهازك.</p>
+                </div>
+                <img src="images/step7.jpg" alt="تثبيت ملف التعريف" class="step-img">
+            </div>
+
+            <div class="instruction-step">
+                <div class="step-text">
+                    <h5>8. تثبيت ملف التعريف</h5>
+                    <p>بعد إعادة التشغيل، اسحب الشاشة إلى أعلى واختر تثبيت ملف التعريف.</p>
+                </div>
+                <img src="images/step8.jpg" alt="تثبيت ملف التعريف" class="step-img">
+            </div>
+
+            <a href="/" class="reference-link">للرجوع الى الصفحة الرئيسية</a>
+        </section>
+    </main>
+
+    <footer>
+        الإدارة العامة لتقنية المعلومات - تطوير وتنفيذ إدارة خدمات المعلومات
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

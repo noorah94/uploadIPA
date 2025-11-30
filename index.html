@@ -1,48 +1,324 @@
 <!DOCTYPE html>
-<!-- <html xmlns="http://www.w3.org/1999/xhtml"> -->
-
+<html lang="ar">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font.css">
-	<title>
-		بطاقة معايدة موظفي أمانة العاصمة المقدسة
-	</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيقات الأجهزة الذكية</title>
 
-	<script type="text/javascript" src="imageProcessing.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<style>
-		.fontStyle {
-			font-family: droid;
-			font-size: 16px;
-			font: bold;
-		}
+    <!-- خطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
 
-		body {
-			direction: rtl;
-			font-family: droid;
-			font-size: 20px;
-			background-image: url(images/bg-repet.png);
-			background-repeat: repeat;
-			background-attachment: fixed;
-			background-position: bottom;
-		}
-	</style> -->
+    <style>
+        :root {
+            --primary: #066d66;
+        }
 
+        body {
+            font-family: 'IBM Plex Sans Arabic', Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* الهيدر */
+        .header-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* عنوان التطبيقات في div مستقل */
+        .page-title {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #066d66;
+        }
+
+        /* بطاقات التطبيقات */
+        .page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .app {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .app:hover {
+            transform: translateY(-5px);
+        }
+
+        .appimg {
+            display: flex;
+            justify-content: center;
+            margin-top: -50px;
+        }
+
+        .rounded-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .app h1 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #066d66;
+        }
+
+        .app-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .app-icons a img {
+            width: 100px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+      .apptag {
+    display: inline-block;
+    margin: 6px 0 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #eafaf8;
+    color: #066d66;
+    border: 1px solid #cfe8e4;
+}
+
+.apptag-private {
+    display: inline-block;
+    margin: 6px 0 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #fff4e0;
+    color: #c79b2a;
+    border: 1px solid #e5c88a;
+}
+
+
+        /* قسم تعليمات التثبيت الجديد */
+        .install-section {
+            text-align: center;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            margin-top: 55px;
+        }
+
+        .install-main-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #eafaf8;
+            padding: 6px;
+            background: #ffffff;
+        }
+
+        .circle-icon {
+            width: 60px;
+            height: 60px;
+            background: #eafaf8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .circle-icon img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .instruction-card {
+            margin-bottom: 20px;
+        }
+
+        /* تغيير لون الزر إلى لون الأمانة */
+        .btn-outline-success {
+             background-color: #066d66 !important;
+            color: #ffffff !important;
+            font-weight: normal;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #066d66 !important;
+            color: #ffffff !important;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #066d66;
+        }
+
+        @media (max-width: 768px) {
+            .app {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-	<h1>khadamaty</h1>
-	<!-- <a href="itms-services://?action=download-manifest&url=https://services.qassim.gov.sa/AppsPub/apps/khadamaty/khadamaty.plist"
-		>Install
-		the In-House App1.1</a> -->
-	<a href="itms-services://?action=download-manifest&url=https://noorah94.github.io/uploadIPA/khadamaty.plist"
-		id="text">Install
-		the In-House App2</a>
+
+    <!-- الهيدر -->
+    <header>
+        <img src="images/header.png" alt="Header" class="header-image">
+    </header>
+
+    <!-- عنوان التطبيقات داخل div مستقل -->
+  <div class="install-icon-wrapper mb-3">
+            
+    <div class="page-title">تطبيقات الأجهزة الذكية</div>
+
+        </div>
+
+      <br>
+
+    <!-- بطاقات التطبيقات -->
+    <div class="page container">
+
+        <!-- تطبيق الأمانة -->
+        <div class="app card">
+            <a class="appimg">
+                <img src="images/amana.png" alt="تطبيق الأمانة" class="rounded-image">
+            </a>
+
+            <div class="card-body">
+                <h1 class="card-title">تطبيق الأمانة</h1>
+                <span class="apptag">عام</span>
+
+                <div class="app-icons">
+                    <a href="https://itunes.apple.com/sa/app/amant-alqsym/id997312328?mt=8" target="_blank">
+                        <img src="images/appstore.png">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=sa.gov.qassim" target="_blank">
+                        <img src="images/googleplay.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- تطبيق خدماتي -->
+        <div class="app card">
+            <a class="appimg">
+                <img src="images/image.57x57.jpg" alt="تطبيق خدماتي" class="rounded-image">
+            </a>
+
+            <div class="card-body">
+                <h1 class="card-title">تطبيق خدماتي</h1>
+<span class="apptag-private">خاص</span>
+
+                <div class="app-icons">
+                    <a href="itms-services://?action=download-manifest&url=https://noorah94.github.io/uploadIPA/khadamaty/khadamaty.plist">
+                        <img src="images/appstore.png">
+                    </a>
+                    <a href="https://noorah94.github.io/uploadIPA/khadamaty/khadamaty.apk">
+                        <img src="images/googleplay.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- بوابة المشاريع -->
+        <div class="app card">
+            <a class="appimg">
+                <img src="images/Projects_Portal.png" alt="بوابة المشاريع" class="rounded-image">
+            </a>
+
+            <div class="card-body">
+                <h1 class="card-title">بوابة المشاريع</h1>
+<span class="apptag-private">خاص</span>
+
+                <div class="app-icons">
+                    <a href="itms-services://?action=download-manifest&url=https://noorah94.github.io/uploadIPA/ProjectPortal/project_portal.plist">
+                        <img src="images/appstore.png">
+                    </a>
+                    <a href="https://noorah94.github.io/uploadIPA/ProjectPortal/project_portal.apk">
+                        <img src="images/googleplay.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- قسم تعليمات التثبيت الجديد -->
+    <div class="install-section container">
+
+        <div class="install-icon-wrapper mb-3">
+
+         <h5 class="fw-bold mb-4" style="color:#066d66;">تعليمات تثبيت التطبيقات الخاصة </h5>
+
+        </div>
 
 
+   <div class="row justify-content-center">
 
+    <!-- Apple -->
+    <div class="col-md-5 col-11 instruction-card">
+        <div class="card p-3 shadow-sm text-center">
+            <div class="circle-icon">
+                <img src="images/appstore.png" alt="Apple">
+            </div>
+
+            <a href="ios.html" class="btn btn-outline-success w-100 mt-3">
+                  أجهزة  Apple
+            </a>
+        </div>
+    </div>
+
+    <!-- Android -->
+    <div class="col-md-5 col-11 instruction-card">
+        <div class="card p-3 shadow-sm text-center">
+            <div class="circle-icon">
+                <img src="images/googleplay.png" alt="Android">
+            </div>
+
+            <a href="android.html" class="btn btn-outline-success w-100 mt-3">
+                  أجهزة  Android
+            </a>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        الإدارة العامة لتقنية المعلومات - تطوير وتنفيذ إدارة خدمات المعلومات
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
